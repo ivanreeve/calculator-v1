@@ -1,0 +1,98 @@
+
+body {
+    background-color: rgba(25, 3, 98, 0.918);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+
+.container{
+    width: 1000px;
+    height: 550px;
+    margin: 20px auto;
+    
+
+}
+
+.calculatorBox{
+    width: 240px;
+    height: 430px;
+    background-color: rgba(247, 245, 246, 0.423);
+    margin: 0 auto;
+    top: 20px;
+    position: relative;
+    box-shadow: 0 4px 8px rgb(136, 5, 31);
+    border-radius: 1rem;
+}
+
+.result{
+    height: 130px;
+    
+}
+
+.fontCal{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(241, 238, 240);
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    padding: 15px;
+}
+
+
+.history{
+    text-align: right;
+    height: 10px;
+    margin: 0 10px;
+    padding-top: 20px;
+    color: white;
+    font-size: 15px;
+    color: #07060c99;
+}
+
+ /* .boxcal{
+    width: 180px;
+    height: 20px;
+    background-color: blue;
+    border: 3px solid rgb(106, 165, 106);
+    padding: 36px;
+    margin: -65px;
+   margin-left: -6px;
+}  */
+
+
+.output{
+    text-align: right;
+    height: 60px;
+    margin: 10px 20px;
+    font-size: 30px;
+    color:beige
+}
+
+.keyboard{
+    height: 300px;
+}
+
+.operator, .number, .empty {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    float: left;
+    border-radius: 50%;
+    border-width: 0;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+.number, .operator{
+    cursor: pointer;
+}
+
+
+.operator {
+    font-size: 20px;
+    background-color: rgb(160, 178, 238);
+}
+

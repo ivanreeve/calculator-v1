@@ -4,15 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <title>Calculator</title>
 </head>
 <body>
+    <!-- CONTAINER -->
     <div class="container">
-        <div class="calculator">
+            <!-- BOX FOR CALCULATOR -->
+        <div class="calculatorBox">
+            <!-- RESULT CALCULATOR-->
             <div class="result">
+                <!-- FONT FOR UPPER -->
+                <div class="fontCal">
+                    <span class="p">Calculator</span>
+                    <span class="p">TUP GEAR</span>
+                </div>
+                    <!-- HISTORY OF CALCULATOR -->
                 <div class="history">
                     <p id="history-value"></p>
                 </div>
+                    <!-- OUTPUT -->
                 <div class="output">
                     <p id="output-value"></p>
                 </div>
@@ -25,24 +36,31 @@
                 <button class="operator" id="/">&#247;</button>
 
                 <!-- SECOND ROW -->
-                <button class="number" id="clear">C</button>
-                <button class="number" id="backspace">CE</button>
-                <button class="number" id="%">%</button>
-                <button class="operator" id="/">&#247;</button>
+                <button class="number" id="7">7</button>
+                <button class="number" id="8">8</button>
+                <button class="number" id="9">9</button>
+                <button class="operator" id="*">&times;</button>
 
                 <!-- THIRD ROW -->
-                <button class="operator" id="clear">C</button>
-                <button class="operator" id="backspace">CE</button>
-                <button class="operator" id="%">%</button>
-                <button class="operator" id="/">&#247;</button>
+                <button class="number" id="4">4</button>
+                <button class="number" id="5">5</button>
+                <button class="number" id="6">6</button>
+                <button class="operator" id="-">-</button>
 
                 <!-- FOURTH ROW -->
-                <button class="operator" id="clear">C</button>
-                <button class="operator" id="backspace">CE</button>
-                <button class="operator" id="%">%</button>
-                <button class="operator" id="/">&#247;</button>
+                <button class="number" id="1">1</button>
+                <button class="number" id="2">2</button>
+                <button class="number" id="3">3</button>
+                <button class="operator" id="+">+</button>
+
+                    <!-- FIFTH ROW -->
+                    <button class="empty" id="empty"></button>
+                    <button class="number" id="0">0</button>
+                    <button class="empty" id="empty"></button>
+                    <button class="operator" id="=">=</button>
             </div>
         </div>
     </div>
+    <script src="./cal.js"></script>
 </body>
 </html>
