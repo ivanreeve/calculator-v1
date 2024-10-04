@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-/* :root { */
-/*     --bg-color:  */
-/*     --operator-color:     */
-/*     --button-color-default:     */
-/* } */
+:root {
+    --bg-color: #0a0c12;
+    --resultBox-bg-color: #26273a;
+    --calculatorBox-bg-color: #11141d;
+    --history-fg-color: #9d9eb2;
+    --button-color-default: #1a1c28;
+    --button-color-operator: #494367;
+    --button-color-clear: #503a68;
+    --button-color-equals: #0334ba;
+}
 
 html {
     height: 100%;
@@ -20,14 +25,14 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #0a0c12;
+    background-color: var(--bg-color);
 }
 
 .calculatorBox {
     width: 240px;
     height: 405px;
     border-radius: 10px;
-    background-color: #11141d;
+    background-color: var(--calculatorBox-bg-color);
     align-items: center;
     justify-items: center;
     justify-content: center;
@@ -44,7 +49,7 @@ body {
 .resultBox {
     height: 80px;
     margin: 0px 20px;
-    background-color: #26273a;
+    background-color: var(--resultBox-bg-color);
     border-radius: 5px;
 }
 
@@ -58,7 +63,7 @@ body {
 }
 
 .history {
-    color: #9d9eb2;
+    color: var(--history-fg-color);
     font-size: 15px;
 }
 
@@ -85,19 +90,19 @@ body {
 
 .number, .empty {
     font-weight: 500;
-    background-color: #1a1c28;
+    background-color: var(--button-color-default);
     font-size: 20px;
 }
 
 .operator {
     font-size: 23px;
-    background-color: #494367;
+    background-color: var(--button-color-operator);
 }
 
 #clear {
-    background-color: #503a68;
+    background-color: var(--button-color-clear);
 }
 
 #equals {
-    background-color: #0334ba;
+    background-color: var(--button-color-equals);
 }
