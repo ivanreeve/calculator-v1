@@ -60,11 +60,13 @@ body {
 .history, .output {
     text-align: right;
     padding-right: 10px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
 }
 
 .history {
     color: var(--history-fg-color);
-    font-size: 15px;
+    font-size: small;
 }
 
 .output {
@@ -88,6 +90,14 @@ body {
     cursor: pointer;
 }
 
+.number:active {
+    background-color: #222536;
+}
+
+.operator:active {
+    background-color: #605887;
+}
+
 .number, .empty {
     font-weight: 500;
     background-color: var(--button-color-default);
@@ -103,6 +113,14 @@ body {
     background-color: var(--button-color-clear);
 }
 
+#clear:active {
+    background-color: #654985;
+}
+
 #equals {
     background-color: var(--button-color-equals);
+}
+
+#equals:active {
+    background-color: #294eb3;
 }
