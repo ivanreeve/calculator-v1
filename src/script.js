@@ -1,3 +1,5 @@
+//Beta and Ivan
+
 var EMPTY = '0';
 var OPERATORS = "+-*/";
 var MAXLEN = 9;
@@ -27,6 +29,7 @@ var calculator = {
         return this.getOutput() === EMPTY;
     }
 };
+
 function isLastCharacterOperator() {
     var history = calculator.getHistory();
     if (history && OPERATORS.indexOf(history.charAt(history.length - 1)) !== -1)
@@ -34,16 +37,28 @@ function isLastCharacterOperator() {
     else
         return false;
 }
+
+function isLastCharacterDot(){
+    var history = calculator.getHistory();
+    if (history && history.charAt(history.length - 1) === '.')
+        return true;
+    else
+        return false;
+}
+
 function clearHistory() {
     calculator.setHistory(EMPTY);
 }
+
 function clearOutput() {
     calculator.setOutput(EMPTY);
 }
+
 function clearAll() {
     clearHistory();
     clearOutput();
 }
+
 function addDigit(val) {
     if (calculator.isHistoryEmpty() && calculator.isOutputEmpty()) {
         calculator.setHistory(val);
@@ -53,10 +68,16 @@ function addDigit(val) {
         if (isLastCharacterOperator()) {
             calculator.setHistory(calculator.getHistory() + val);
         }
+        else if (isLastCharacterDot()) {
+            calculator.setHistory(calculator.getHistory().slice(0, -1) + val);
+        }
         else {
             calculator.setHistory(val);
         }
         calculator.setOutput(val);
+    }
+    else if (isLastCharacterDot()) {
+        calculator.setHistory(calculator.getHistory().slice(0, -1) + val);
     }
     else {
         var output = calculator.getOutput();
@@ -66,6 +87,7 @@ function addDigit(val) {
         }
     }
 }
+
 function addOperator(sign) {
     calculate();
     var history = calculator.getHistory();
@@ -79,7 +101,7 @@ function calculate() {
     var history = calculator.getHistory();
     try {
         if (history) {
-            if (isLastCharacterOperator())
+if (isLastCharacterOperator())
                 calculator.setHistory(eval(history.slice(0, -1)));
             else {
                 calculator.setHistory(eval(history));
@@ -92,6 +114,7 @@ function calculate() {
         clearAll();
     }
 }
+
 function backspace() {
     var history = calculator.getHistory();
     var output = calculator.getOutput();
@@ -109,4 +132,5 @@ function backspace() {
         }
     }
 }
+
 clearAll();

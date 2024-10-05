@@ -6,9 +6,13 @@
     --calculatorBox-bg-color: #11141d;
     --history-fg-color: #9d9eb2;
     --button-color-default: #1a1c28;
+    --button-color-default-active: #222536;
     --button-color-operator: #494367;
+    --button-color-operator-active: #605887;
     --button-color-clear: #503a68;
+    --button-color-clear-active:  #654985;
     --button-color-equals: #0334ba;
+    --button-color-equals-active: #294eb3;
 }
 
 html {
@@ -77,7 +81,7 @@ body {
     margin: 12px;
 }
 
-.operator, .number, .empty {
+.operator, .number, .emptyNumber, .emptyOperator {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -86,19 +90,23 @@ body {
     margin: 2px;
 }
 
+.emptyOperator {
+    background-color: var(--button-color-operator);
+}
+
 .number, .operator {
     cursor: pointer;
 }
 
 .number:active {
-    background-color: #222536;
+    background-color: var(--button-color-default-active);
 }
 
 .operator:active {
-    background-color: #605887;
+    background-color: var(--button-color-operator-active);
 }
 
-.number, .empty {
+.number, .emptyNumber {
     font-weight: 500;
     background-color: var(--button-color-default);
     font-size: 20px;
@@ -114,7 +122,7 @@ body {
 }
 
 #clear:active {
-    background-color: #654985;
+    background-color: var(--button-color-clear-active);
 }
 
 #equals {
@@ -122,5 +130,5 @@ body {
 }
 
 #equals:active {
-    background-color: #294eb3;
+    background-color: var(--button-color-equals-active);
 }
